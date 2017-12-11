@@ -1,10 +1,10 @@
 // Letter Constructor (letter.js) 
+function Letter() {
+	// tbd
+};
 
-//require word.js
-var GetWord = require("./word.js");
 
-var newWord = new GetWord();
-newWord.word();
+module.exports = Letter;
 
 	// check if the guessed letter matches any of the letters in the word
 	// record the guessed letters
