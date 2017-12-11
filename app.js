@@ -8,7 +8,7 @@ var wordBank = ["afraid", "blood", "cadaver", "coffin", "monster", "murder", "sp
 var guessesLeft = 12; // Number of guesses remaining
 var guessesArray = [];
 var missedArray = [];
-var guess = process.argv[2]; //user's guess
+// var guess = process.argv[2]; //user's guess
 var hangmanWord = [];
 var word = "";
 
@@ -95,9 +95,11 @@ var game = {
 		      }
 		  	]).then(function(guess) {
 		  		// callback function returns {guess: b}, so to get the input letter, we need guess.guess
-		  		console.log(guess.guess);
+		  		
+		  		var newLetter = new Letter(guess.guess);
+		  		guess = newLetter.currentLetter;
 		  		// pass guess.guess to the next function
-				game.verifyUnique(guess.guess);
+				game.verifyUnique(guess);
 		  	});
 		};
 	},

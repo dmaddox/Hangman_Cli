@@ -1,6 +1,6 @@
 // Letter Constructor (letter.js) 
-function Letter() {
-	// tbd
+function Letter(lett) {
+	this.currentLetter = lett;
 };
 
 
