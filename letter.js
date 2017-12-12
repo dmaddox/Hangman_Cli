@@ -1,8 +1,22 @@
 // Letter Constructor (letter.js) 
-function Letter(lett) {
-	this.currentLetter = lett;
+function Letter(letter) {
+	this.currentLetter = letter;
+	this.display = "";
+	this.compare = function(word) {
+		// If the letter is in the word
+		if (word.indexOf(this.currentLetter) !== -1) {
+			// set this.display to the currentLetter *guess*
+			this.display = this.currentLetter;
+		} 
+		// if the letter is not in the word
+		else {
+			// notify the user
+			console.log("Sorry, \"" + this.currentLetter + "\" is not in the word.")
+			// set this.display to display a "-"
+			this.display = "-";
+		}
+	};
 };
-
 
 module.exports = Letter;
 
